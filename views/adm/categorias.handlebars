@@ -1,0 +1,18 @@
+<h2>Lista</h2>
+<hr>
+<a href="/adm/categorias/add"><button type="submit">Cadastrar</button></a>
+{{#each categorias}}
+<div>
+    <h1>Nome:{{nome}}</h1>
+    <h1>Slug:{{slug}}</h1>
+    <a href="/adm/categorias/edit/{{_id}}"><button class="btn btn-secondary">Editar</button></a>
+    <form action="/adm/categorias/deletar" method="post">
+        <input type="hidden" name="id" value="{{_id}}">
+        <button type="submit">Deletar Categoria</button>
+    </form>
+</div>
+{{else}}
+<h4>
+        Nenhuma Categoria registrada!
+</h4>
+{{/each}}

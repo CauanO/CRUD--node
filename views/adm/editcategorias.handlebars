@@ -1,0 +1,9 @@
+<h1>Editar Categorias</h1>
+<form action="/adm/categorias/edit" method="post">
+    <label for="nome">Nome</label>
+    <input type="hidden" name="id" value="{{categoria._id}}">
+    <input type="text" name="nome" id="nome" placeholder="Nome da categoria" value="{{categoria.nome}}">
+    <label for="slug">Slug</label>
+    <input type="text" name="slug" id="slug" placeholder="Nome do Slug" value="{{categoria.slug}}">
+    <button type="submit">Editar</button>
+</form>
